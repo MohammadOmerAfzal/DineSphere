@@ -219,7 +219,7 @@ const LandingPage = () => {
         <div className="nav-content">
           <div className="nav-left">
             <h1 className="logo" onClick={() => navigate('/')}>
-              FoodHub
+              DineSphere
             </h1>
             <div className="location">
               <MapPin size={20} className="text-orange-500" />
