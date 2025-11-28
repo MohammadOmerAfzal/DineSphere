@@ -1,0 +1,215 @@
+/* Fullscreen centered layout */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #FFF9F4; /* Soft cream-white background */
+  padding: 1rem;
+}
+
+/* Card layout */
+.login-card {
+  background: white;
+  padding: 3rem 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(255, 107, 53, 0.08);
+  width: 440px;
+  max-width: 100%;
+  text-align: center;
+  border: 1px solid rgba(255, 107, 53, 0.1);
+}
+
+.welcome {
+  color: #FF6B35; /* Primary orange */
+  font-size: 2.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+/* Form elements */
+.form-group {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #2E2E2E; /* Primary text color */
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 2px solid #e8e8e8;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #fafafa;
+  color: #2E2E2E;
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline: none;
+  border-color: #FF6B35;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+input::placeholder {
+  color: #999;
+}
+
+.password-input {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.password-input input {
+  padding-right: 3rem;
+}
+
+.toggle {
+  position: absolute;
+  right: 1rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  padding: 0;
+  transition: transform 0.2s ease;
+}
+
+.toggle:hover {
+  transform: scale(1.1);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #FF6B35; /* Primary orange */
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.2);
+}
+
+.btn-primary:hover {
+  background-color: #e45e2f; /* Hover shade */
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(255, 107, 53, 0.3);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.divider {
+  margin: 1.5rem 0;
+  color: #888;
+  font-weight: 500;
+  position: relative;
+  font-size: 0.9rem;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 45%;
+  height: 1px;
+  background: #e8e8e8;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+.btn-google {
+  background-color: white;
+  color: #2E2E2E;
+  border: 2px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.btn-google:hover {
+  background-color: #f8f8f8;
+  border-color: #FF6B35;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.footer-text {
+  margin-top: 1rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.link {
+  color: #118AB2; /* Info blue for links */
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: #0f799b; /* Hover shade for links */
+  text-decoration: underline;
+}
+
+.wave {
+  animation: wave 1.4s infinite;
+  display: inline-block;
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(20deg); }
+  40% { transform: rotate(-15deg); }
+  60% { transform: rotate(10deg); }
+  80% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .welcome {
+    font-size: 2rem;
+  }
+}

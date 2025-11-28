@@ -1,0 +1,311 @@
+/* Register Page Styles */
+.register-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #FFF9F4; /* Soft cream-white background */
+}
+
+.register-card {
+  width: 100%;
+  max-width: 28rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  border: 1px solid rgba(255, 107, 53, 0.1);
+}
+
+.register-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.register-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #FF6B35; /* Primary orange */
+}
+
+.register-subtitle {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Form Styles */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #2E2E2E; /* Primary text color */
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e8e8e8;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #fafafa;
+  color: #2E2E2E;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #FF6B35;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+.form-input::placeholder {
+  color: #999;
+}
+
+/* Password Strength Indicator */
+.password-strength {
+  margin-top: 0.75rem;
+}
+
+.strength-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.strength-label {
+  color: #2E2E2E;
+}
+
+.strength-value {
+  font-weight: 600;
+}
+
+.strength-bar {
+  height: 0.5rem;
+  background-color: #e8e8e8;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.strength-fill {
+  height: 100%;
+  transition: all 0.5s ease-out;
+  border-radius: 1rem;
+}
+
+/* Strength Colors */
+.strength-weak {
+  background-color: #ef4444;
+}
+
+.strength-fair {
+  background-color: #f59e0b;
+}
+
+.strength-good {
+  background-color: #eab308;
+}
+
+.strength-strong {
+  background-color: #2ECC71; /* Accent green */
+}
+
+/* Submit Button */
+.submit-button {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #FF6B35; /* Primary orange */
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.25);
+  margin-top: 1rem;
+}
+
+.submit-button:hover {
+  background-color: #e45e2f; /* Hover shade */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.35);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+}
+
+.submit-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Login Link */
+.register-login-link {
+  text-align: center;
+  margin-top: 2rem;
+  color: #666;
+}
+
+.login-link {
+  color: #118AB2; /* Info blue */
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.login-link:hover {
+  color: #0f799b; /* Hover shade for blue */
+  text-decoration: underline;
+}
+
+/* Error States */
+.form-input.error {
+  border-color: #ef4444;
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Success States */
+.form-input.success {
+  border-color: #2ECC71;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .register-card {
+    padding: 1.5rem;
+    margin: 0.5rem;
+  }
+  
+  .register-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .register-card {
+    padding: 1rem;
+  }
+  
+  .register-title {
+    font-size: 1.75rem;
+  }
+}
+
+/* Animation for form elements */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.register-card {
+  animation: slideIn 0.5s ease-out;
+}
+
+.form-group {
+  animation: slideIn 0.5s ease-out;
+}
+
+/* Focus visible for accessibility */
+.form-input:focus-visible {
+  outline: 2px solid #FF6B35;
+  outline-offset: 2px;
+}
+
+.submit-button:focus-visible {
+  outline: 2px solid #FF6B35;
+  outline-offset: 2px;
+}
+
+/* Loading state */
+.submit-button.loading {
+  position: relative;
+  color: transparent;
+}
+
+.submit-button.loading::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.google-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px;
+  width: 100%;
+  font-weight: 500;
+  color: #555;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.google-button:hover {
+  background-color: #f5f5f5;
+}
+
+.google-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.oauth-divider {
+  text-align: center;
+  margin: 15px 0;
+  color: #888;
+  font-size: 14px;
+}
+.oauth-divider span {
+  background: #fff;
+  padding: 0 8px;
+}
