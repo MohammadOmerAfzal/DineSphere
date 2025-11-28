@@ -49,6 +49,9 @@ FRONTEND_URL=http://localhost:5173
 REDIS_HOST=localhost
 REDIS_PORT=6379
 SESSION_SECRET=<your-session-secret>
+GOOGLE_CLIENT_ID=<Your-ID-Here>
+GOOGLE_CLIENT_SECRET=<Your-Secret-Here>
+GOOGLE_CALLBACK_URL=http://localhost:5000/api/auth/google/callback
 
 Start server: npm run dev
 
